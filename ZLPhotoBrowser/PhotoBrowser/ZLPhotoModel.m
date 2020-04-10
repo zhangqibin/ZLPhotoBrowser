@@ -18,7 +18,17 @@
     model.type = type;
     model.duration = duration;
     model.selected = NO;
+    model.fileSize = [ZLPhotoModel getAssetFileSize:asset];
     return model;
+}
+
++ (long long)getAssetFileSize:(PHAsset *)asset
+{
+    PHAssetResource *resource = [[PHAssetResource assetResourcesForAsset:asset] firstObject];
+
+    long long size = [[resource valueForKey:@"fileSize"] longLongValue];
+    
+    return size;
 }
 
 @end

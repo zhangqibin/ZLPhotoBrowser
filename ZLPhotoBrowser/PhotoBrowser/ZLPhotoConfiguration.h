@@ -127,6 +127,16 @@
 @property (nonatomic, assign) NSInteger maxVideoDuration;
 
 /**
+ 允许选择文件的最大大小，单位：兆， 默认 20
+ */
+@property (nonatomic, assign) NSInteger maxFileSize;
+
+/**
+允许选择文件的最大大小，单位：字节， 默认 maxFileSize*1024*1024
+*/
+@property (nonatomic, assign) long long maxFileLength;
+
+/**
  是否允许滑动选择 默认 YES
  */
 @property (nonatomic, assign) BOOL allowSlideSelect;

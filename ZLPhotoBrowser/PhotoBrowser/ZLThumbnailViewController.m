@@ -673,10 +673,16 @@ typedef NS_ENUM(NSUInteger, SlideSelectType) {
         ShowToastLong(@"%@", GetLocalLanguageTextValue(ZLPhotoBrowseriCloudPhotoText));
         return NO;
     }
-    if (model.type == ZLAssetMediaTypeVideo && GetDuration(model.duration) > configuration.maxVideoDuration) {
-        ShowToastLong(GetLocalLanguageTextValue(ZLPhotoBrowserMaxVideoDurationText), configuration.maxVideoDuration);
+//    if (model.type == ZLAssetMediaTypeVideo && GetDuration(model.duration) > configuration.maxVideoDuration) {
+//        ShowToastLong(GetLocalLanguageTextValue(ZLPhotoBrowserMaxVideoDurationText), configuration.maxVideoDuration);
+//        return NO;
+//    }
+    
+    if (model.fileSize > configuration.maxFileLength) {
+        ShowToastLong(@"不能选择超过%@M的照片/视频", @(configuration.maxFileSize));
         return NO;
     }
+    
     return YES;
 }
 

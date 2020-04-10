@@ -762,8 +762,13 @@ double const ScalePhotoWidth = 1000;
                 ShowToastLong(@"%@", GetLocalLanguageTextValue(ZLPhotoBrowseriCloudPhotoText));
                 return;
             }
-            if (model.type == ZLAssetMediaTypeVideo && GetDuration(model.duration) > self.configuration.maxVideoDuration) {
-                ShowToastLong(GetLocalLanguageTextValue(ZLPhotoBrowserMaxVideoDurationText), self.configuration.maxVideoDuration);
+//            if (model.type == ZLAssetMediaTypeVideo && GetDuration(model.duration) > self.configuration.maxVideoDuration) {
+//                ShowToastLong(GetLocalLanguageTextValue(ZLPhotoBrowserMaxVideoDurationText), self.configuration.maxVideoDuration);
+//                return;
+//            }
+            
+            if (model.fileSize > self.configuration.maxFileLength) {
+                ShowToastLong(@"不能选择超过%@M的照片/视频", @(self.configuration.maxFileSize));
                 return;
             }
             
