@@ -41,7 +41,7 @@
     configuration.allowSelectOriginal = YES;
     configuration.maxEditVideoTime = 10;
     configuration.maxVideoDuration = 120;
-    configuration.maxFileSize = 0.001;
+    configuration.maxFileSize = 20;
     configuration.maxFileLength = configuration.maxFileSize * 1024 * 1024;
     configuration.allowSlideSelect = YES;
     configuration.allowDragSelect = NO;
