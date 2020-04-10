@@ -678,8 +678,8 @@ typedef NS_ENUM(NSUInteger, SlideSelectType) {
 //        return NO;
 //    }
     
-    if (model.fileSize > configuration.maxFileSize) {
-        ShowToastLong(@"不能选择超过%@M的照片/视频", @(configuration.maxFileSize/1048576.0));
+    if (model.fileSize > configuration.maxFileLength) {
+        ShowToastLong(@"不能选择超过%@M的照片/视频", @(configuration.maxFileSize));
         return NO;
     }
     

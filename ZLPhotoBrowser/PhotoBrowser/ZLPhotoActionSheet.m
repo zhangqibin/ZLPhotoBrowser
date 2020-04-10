@@ -767,8 +767,8 @@ double const ScalePhotoWidth = 1000;
 //                return;
 //            }
             
-            if (model.fileSize > self.configuration.maxFileSize) {
-                ShowToastLong(@"不能选择超过%@M的照片/视频", @(self.configuration.maxFileSize/1048576.0));
+            if (model.fileSize > self.configuration.maxFileLength) {
+                ShowToastLong(@"不能选择超过%@M的照片/视频", @(self.configuration.maxFileSize));
                 return;
             }
             
