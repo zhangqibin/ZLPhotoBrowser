@@ -416,8 +416,8 @@
 //            return;
 //        }
         
-        if (model.fileSize > configuration.maxFileLength) {
-            ShowToastLong(@"不能选择超过%@M的照片/视频", @(configuration.maxFileSize));
+        if (model.fileSize > configuration.maxFileSize) {
+            ShowToastLong(@"不能选择超过%@M的照片/视频", @(configuration.maxFileSize/1048576.0));
             return;
         }
         
@@ -478,8 +478,8 @@
 //            return;
 //        }
         
-        if (model.fileSize > configuration.maxFileLength) {
-            ShowToastLong(@"不能选择超过%@M的照片/视频", @(configuration.maxFileSize));
+        if (model.fileSize > configuration.maxFileSize) {
+            ShowToastLong(@"不能选择超过%@M的照片/视频", @(configuration.maxFileSize/1048576.0));
             return;
         }
         
